@@ -1,0 +1,164 @@
+<form id="addForm">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input
+      type="text"
+      id="firstName"
+      name="first_name"
+      value="Sardor"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input
+      type="text"
+      id="lastName"
+      name="last_name"
+      value="Sobidjonov"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="nickName" class="form-label">Nick Name</label>
+    <input
+      type="text"
+      id="nickName"
+      name="nick_name"
+      value="sabidjanovv"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Author Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      value="sardorsobidjonov1@gmail.com"
+      aria-describedby="emailHelp"
+    />
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input
+      type="phone"
+      id="phone"
+      name="phone"
+      value="+998-77-777-77-77"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      value="123456789"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="info" class="form-label">Some Information</label>
+    <input
+      type="text"
+      id="info"
+      name="info"
+      value="Born in 13 June 2005"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="position" class="form-label">Position</label>
+    <input
+      type="text"
+      id="position"
+      name="position"
+      value="Web Developer"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="photo" class="form-label">Photo</label>
+    <input
+      type="file"
+      id="photo"
+      name="photo"
+      class="form-control"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="isExpert" class="form-label">Is Expert</label>
+    <input
+      type="checkbox"
+      id="isExpert"
+      name="is_expert"
+      class="form-check-input"
+    />
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById("addForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const nickName = document.getElementById("nickName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const password = document.getElementById("password").value;
+    const info = document.getElementById("info").value;
+    const position = document.getElementById("position").value;
+    const photo = document.getElementById("photo").files[0];
+    const isExpert = document.getElementById("isExpert").checked;
+
+    const body_data = {
+      first_name: firstName,
+      last_name: lastName,
+      nick_name: nickName,
+      email: email,
+      phone: phone,
+      password: password,
+      info: info,
+      position: position,
+      photo: photo,
+      is_expert: isExpert,
+    };
+    try {
+      const response = await fetch('http://localhost:3000/api/author/add', {
+        method: "POST",
+        headers: {
+            "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(body_data),
+      });
+
+      if (response.ok) {
+        console.log("Author added successfully");
+        const data = await response.json();
+        console.log(data.accessToken);
+        localStorage.setItem("AccessToken", data.accessToken);
+      } else {
+        console.log("Failed to add author");
+      }
+    } catch (error) {
+      console.log("Fetch error", error);
+    }
+  });
+</script>

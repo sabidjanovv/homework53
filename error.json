@@ -1,0 +1,138 @@
+{
+  "level": "\u001b[31merror\u001b[39m",
+  "message": "middlewareError",
+  "meta": {
+    "date": "Thu Aug 29 2024 10:08:37 GMT+0500 (Uzbekistan Standard Time)",
+    "error": {
+      "body": "{\r\n  \"email\": \"islom1@gmail.com\"\r\n  \"password\": \"123456789\"\r\n}\r\n",
+      "expose": true,
+      "status": 400,
+      "statusCode": 400,
+      "type": "entity.parse.failed"
+    },
+    "exception": true,
+    "level": "error",
+    "message": "uncaughtException: Expected ',' or '}' after property value in JSON at position 36 (line 3 column 3)\nSyntaxError: Expected ',' or '}' after property value in JSON at position 36 (line 3 column 3)\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:520:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+    "os": { "loadavg": [0, 0, 0], "uptime": 7655.812 },
+    "process": {
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\app.js"
+      ],
+      "cwd": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo",
+      "execPath": "C:\\Program Files\\nodejs\\node.exe",
+      "gid": null,
+      "memoryUsage": {
+        "arrayBuffers": 36558496,
+        "external": 38963458,
+        "heapTotal": 39059456,
+        "heapUsed": 33965488,
+        "rss": 83460096
+      },
+      "pid": 20876,
+      "uid": null,
+      "version": "v22.3.0"
+    },
+    "req": {
+      "headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "connection": "keep-alive",
+        "content-length": "64",
+        "content-type": "application/json",
+        "cookie": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmNmMTEzNDEwNDE1ODJiN2VkMjRmYjMiLCJlbWFpbCI6InNhYmlkamFub3Z2QGdtYWlsLmNvbSIsImlzX2V4cGVydCI6ZmFsc2UsImlhdCI6MTcyNDg0NjM5MiwiZXhwIjoxNzI2MTQyMzkyfQ.SK8BJNLiCJYAsjc218nr8p9QMPmhdh_4lDqHbAgvjA8",
+        "host": "localhost:3000",
+        "postman-token": "1097e6ad-4a29-4e9d-b842-43eb7b02f5ce",
+        "user-agent": "PostmanRuntime/7.41.2"
+      },
+      "httpVersion": "1.1",
+      "method": "POST",
+      "originalUrl": "/api/author/login",
+      "query": {},
+      "url": "/api/author/login"
+    },
+    "stack": "SyntaxError: Expected ',' or '}' after property value in JSON at position 36 (line 3 column 3)\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:520:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+    "trace": [
+      {
+        "column": null,
+        "file": null,
+        "function": "JSON.parse",
+        "line": null,
+        "method": "parse",
+        "native": false
+      },
+      {
+        "column": 19,
+        "file": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\types\\json.js",
+        "function": "parse",
+        "line": 92,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 18,
+        "file": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\body-parser\\lib\\read.js",
+        "function": null,
+        "line": 128,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 9,
+        "file": "node:async_hooks",
+        "function": "AsyncResource.runInAsyncScope",
+        "line": 206,
+        "method": "runInAsyncScope",
+        "native": false
+      },
+      {
+        "column": 16,
+        "file": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js",
+        "function": "invokeCallback",
+        "line": 238,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 7,
+        "file": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js",
+        "function": "done",
+        "line": 227,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 7,
+        "file": "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\itinfo\\node_modules\\raw-body\\index.js",
+        "function": "IncomingMessage.onEnd",
+        "line": 287,
+        "method": "onEnd",
+        "native": false
+      },
+      {
+        "column": 28,
+        "file": "node:events",
+        "function": "IncomingMessage.emit",
+        "line": 520,
+        "method": "emit",
+        "native": false
+      },
+      {
+        "column": 12,
+        "file": "node:internal/streams/readable",
+        "function": "endReadableNT",
+        "line": 1696,
+        "method": null,
+        "native": false
+      },
+      {
+        "column": 21,
+        "file": "node:internal/process/task_queues",
+        "function": "process.processTicksAndRejections",
+        "line": 82,
+        "method": "processTicksAndRejections",
+        "native": false
+      }
+    ]
+  }
+}

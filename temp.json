@@ -1,0 +1,26 @@
+{
+  "level": "\u001b[32minfo\u001b[39m",
+  "message": "POST /api/author/login 404 225ms",
+  "meta": {
+    "req": {
+      "headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "connection": "keep-alive",
+        "content-length": "65",
+        "content-type": "application/json",
+        "cookie": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmNmMTEzNDEwNDE1ODJiN2VkMjRmYjMiLCJlbWFpbCI6InNhYmlkamFub3Z2QGdtYWlsLmNvbSIsImlzX2V4cGVydCI6ZmFsc2UsImlhdCI6MTcyNDg0NjM5MiwiZXhwIjoxNzI2MTQyMzkyfQ.SK8BJNLiCJYAsjc218nr8p9QMPmhdh_4lDqHbAgvjA8",
+        "host": "localhost:3000",
+        "postman-token": "2d3d771a-31e4-4d05-a0a8-d542c64f7098",
+        "user-agent": "PostmanRuntime/7.41.2"
+      },
+      "httpVersion": "1.1",
+      "method": "POST",
+      "originalUrl": "/api/author/login",
+      "query": {},
+      "url": "/api/author/login"
+    },
+    "res": { "statusCode": 404 },
+    "responseTime": 225
+  }
+}

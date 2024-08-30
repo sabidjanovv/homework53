@@ -1,0 +1,12 @@
+2024-08-29T04:14:57.858Z [undefined] : uncaughtException: authorLogin is not defined
+ReferenceError: authorLogin is not defined
+    at Object.<anonymous> (C:\Users\Asus\OneDrive\Рабочий стол\itinfo\controllers\author.controller.js:274:3)
+    at Module._compile (node:internal/modules/cjs/loader:1460:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1544:10)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:212:19)
+    at Module.require (node:internal/modules/cjs/loader:1297:12)
+    at require (node:internal/modules/helpers:123:16)
+    at Object.<anonymous> (C:\Users\Asus\OneDrive\Рабочий стол\itinfo\routes\author.routes.js:12:5)
+    at Module._compile (node:internal/modules/cjs/loader:1460:14)
